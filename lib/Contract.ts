@@ -2,7 +2,7 @@
 
 import { ethers } from "ethers";
 import { getProvider, getSigner } from "./web3";
-import VaultArtifacts from "@/contract/out/Vault.sol/Vault.json";
+import VaultArtifacts from "@/abi/Vault.json";
 
 const contractAddress = process.env.NEXT_PUBLIC_VAULT_ADDRESS!;
 const SEPOLIA_CHAIN_ID = 11155111;
