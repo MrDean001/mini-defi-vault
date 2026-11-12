@@ -1,0 +1,692 @@
+module.exports = [
+"[externals]/buffer [external] (buffer, cjs)", ((__turbopack_context__, module, exports) => {
+
+var mod = __turbopack_context__.x("buffer", () => require("buffer"));
+
+module.exports = mod;
+}),
+"[externals]/crypto [external] (crypto, cjs)", ((__turbopack_context__, module, exports) => {
+
+var mod = __turbopack_context__.x("crypto", () => require("crypto"));
+
+module.exports = mod;
+}),
+"[externals]/events [external] (events, cjs)", ((__turbopack_context__, module, exports) => {
+
+var mod = __turbopack_context__.x("events", () => require("events"));
+
+module.exports = mod;
+}),
+"[externals]/http [external] (http, cjs)", ((__turbopack_context__, module, exports) => {
+
+var mod = __turbopack_context__.x("http", () => require("http"));
+
+module.exports = mod;
+}),
+"[externals]/https [external] (https, cjs)", ((__turbopack_context__, module, exports) => {
+
+var mod = __turbopack_context__.x("https", () => require("https"));
+
+module.exports = mod;
+}),
+"[externals]/net [external] (net, cjs)", ((__turbopack_context__, module, exports) => {
+
+var mod = __turbopack_context__.x("net", () => require("net"));
+
+module.exports = mod;
+}),
+"[externals]/node:crypto [external] (node:crypto, cjs)", ((__turbopack_context__, module, exports) => {
+
+var mod = __turbopack_context__.x("node:crypto", () => require("node:crypto"));
+
+module.exports = mod;
+}),
+"[externals]/stream [external] (stream, cjs)", ((__turbopack_context__, module, exports) => {
+
+var mod = __turbopack_context__.x("stream", () => require("stream"));
+
+module.exports = mod;
+}),
+"[externals]/tls [external] (tls, cjs)", ((__turbopack_context__, module, exports) => {
+
+var mod = __turbopack_context__.x("tls", () => require("tls"));
+
+module.exports = mod;
+}),
+"[externals]/url [external] (url, cjs)", ((__turbopack_context__, module, exports) => {
+
+var mod = __turbopack_context__.x("url", () => require("url"));
+
+module.exports = mod;
+}),
+"[externals]/util [external] (util, cjs)", ((__turbopack_context__, module, exports) => {
+
+var mod = __turbopack_context__.x("util", () => require("util"));
+
+module.exports = mod;
+}),
+"[externals]/zlib [external] (zlib, cjs)", ((__turbopack_context__, module, exports) => {
+
+var mod = __turbopack_context__.x("zlib", () => require("zlib"));
+
+module.exports = mod;
+}),
+"[project]/components/Deposit.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>Deposit
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers__$2e$Contract$3e$__ = __turbopack_context__.i("[project]/node_modules/ethers/lib.esm/ethers.js [app-ssr] (ecmascript) <export * as ethers .Contract>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers__$2e$parseEther$3e$__ = __turbopack_context__.i("[project]/node_modules/ethers/lib.esm/ethers.js [app-ssr] (ecmascript) <export * as ethers .parseEther>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$web3$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/web3.ts [app-ssr] (ecmascript)");
+"use client";
+;
+;
+;
+;
+function Deposit() {
+    const [amount, setAmount] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [status, setStatus] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    const handleDeposit = async ()=>{
+        try {
+            if (!amount || Number(amount) <= 0) {
+                alert("Enter a valid ETH amount.");
+                return;
+            }
+            setLoading(true);
+            setStatus("Connecting to contract...");
+            const provider = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$web3$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getProvider"])();
+            const signer = await provider.getSigner();
+            const contract = new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers__$2e$Contract$3e$__["ethers"].Contract(("TURBOPACK compile-time value", "0xbbC26Ef5052B790fC03C5F8dD46d16ee9BC0B1Cd"), [
+                "function deposit() payable"
+            ], signer);
+            setStatus("Waiting for wallet confirmation...");
+            const tx = await contract.deposit({
+                value: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers__$2e$parseEther$3e$__["ethers"].parseEther(amount)
+            });
+            setStatus("Transaction submitted...");
+            await tx.await();
+            setStatus("Deposit successful");
+            setAmount("");
+        } catch (error) {
+            console.error(error);
+            if (error.shortMessage) {
+                setStatus(error.shortMessage);
+            } else {
+                setStatus("Transaction failed.");
+            }
+        } finally{
+            setLoading(false);
+        }
+    };
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "max-w-md rounded-lg border p-6 shadow-md bg-white",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                className: "mb-4 text-2xl font-bold",
+                children: "Deposit ETH"
+            }, void 0, false, {
+                fileName: "[project]/components/Deposit.tsx",
+                lineNumber: 50,
+                columnNumber: 5
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                type: "number",
+                step: "0.001",
+                min: "0",
+                placeholder: "0.01",
+                value: amount,
+                onChange: (e)=>setAmount(e.target.value),
+                className: "mb-4 w-full rounded border p-2"
+            }, void 0, false, {
+                fileName: "[project]/components/Deposit.tsx",
+                lineNumber: 53,
+                columnNumber: 5
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                onClick: handleDeposit,
+                disabled: loading,
+                className: "w-full rounded bg-blue-600 py-2 text-white hover:bg-blue-700 disabled:bg-gray-400",
+                children: loading ? "Depositin..." : "Deposit"
+            }, void 0, false, {
+                fileName: "[project]/components/Deposit.tsx",
+                lineNumber: 56,
+                columnNumber: 5
+            }, this),
+            status && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "mt-4 text-sm text-gray-700",
+                children: [
+                    status,
+                    " "
+                ]
+            }, void 0, true, {
+                fileName: "[project]/components/Deposit.tsx",
+                lineNumber: 61,
+                columnNumber: 3
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/components/Deposit.tsx",
+        lineNumber: 49,
+        columnNumber: 5
+    }, this);
+}
+}),
+"[project]/components/NavBar.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>NavBar
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Walletconnect$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/Walletconnect.tsx [app-ssr] (ecmascript)");
+"use client";
+;
+;
+;
+function NavBar() {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
+        className: "sticky top-0 z-50 border-b bg-white shadow-sm",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "mx-auto flex max-w-7xl items-center jutify-between px-6 py-4",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                    href: "/",
+                    className: "text-2xl font-bold text-blue-600",
+                    children: "Mini Defi Vault"
+                }, void 0, false, {
+                    fileName: "[project]/components/NavBar.tsx",
+                    lineNumber: 11,
+                    columnNumber: 5
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "hidden items-center gap-8 md:flex",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                            href: "/",
+                            className: "transition hover:text-blue-600",
+                            children: "Dashboard"
+                        }, void 0, false, {
+                            fileName: "[project]/components/NavBar.tsx",
+                            lineNumber: 17,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                            href: "#deposit",
+                            className: "transition hover:text-blue-600",
+                            children: "Deposit"
+                        }, void 0, false, {
+                            fileName: "[project]/components/NavBar.tsx",
+                            lineNumber: 20,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                            href: "#withdraw",
+                            className: "transition hover:text-blue-600",
+                            children: "Withdraw"
+                        }, void 0, false, {
+                            fileName: "[project]/components/NavBar.tsx",
+                            lineNumber: 23,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                            href: "#history",
+                            className: "transition hover:text-blue-600",
+                            children: "History"
+                        }, void 0, false, {
+                            fileName: "[project]/components/NavBar.tsx",
+                            lineNumber: 26,
+                            columnNumber: 9
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/components/NavBar.tsx",
+                    lineNumber: 16,
+                    columnNumber: 5
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Walletconnect$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                    fileName: "[project]/components/NavBar.tsx",
+                    lineNumber: 32,
+                    columnNumber: 5
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/components/NavBar.tsx",
+            lineNumber: 9,
+            columnNumber: 11
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/components/NavBar.tsx",
+        lineNumber: 8,
+        columnNumber: 9
+    }, this);
+}
+}),
+"[project]/components/UserBalance.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>UserBalance
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers__$2e$formatEther$3e$__ = __turbopack_context__.i("[project]/node_modules/ethers/lib.esm/ethers.js [app-ssr] (ecmascript) <export * as ethers .formatEther>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$Contract$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/Contract.ts [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$web3$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/web3.ts [app-ssr] (ecmascript)");
+"use client";
+;
+;
+;
+;
+;
+function UserBalance() {
+    const [address, setAddress] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    const [balance, setBalance] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("0");
+    const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true);
+    const loadBalance = async (userAddress)=>{
+        try {
+            const provider = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$web3$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getProvider"])();
+            const accounts = await provider.send("eth_accounts", []);
+            if (accounts.length === 0) {
+                setBalance("0");
+                return;
+            }
+            const address = accounts[0];
+            setAddress(address);
+            const contract = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$Contract$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getVaultReadContract"])();
+            const userBalance = await contract.getUserBalance(address);
+            setBalance(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers__$2e$formatEther$3e$__["ethers"].formatEther(userBalance));
+        } catch (error) {
+            console.error("Error loading user balance:", error);
+        } finally{
+            setLoading(false);
+        }
+    };
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        loadBalance(address);
+        // Refresh every 10 seconds
+        const interval = setInterval(()=>{
+            loadBalance(address);
+        }, 10000);
+        return ()=>clearInterval(interval);
+    }, []);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "rounded-lg border p-6 shadow-md bg-white",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                className: "mb-2 text-xl font-bold",
+                children: "My Vault Balance"
+            }, void 0, false, {
+                fileName: "[project]/components/UserBalance.tsx",
+                lineNumber: 42,
+                columnNumber: 13
+            }, this),
+            loading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                children: "Loading balance..."
+            }, void 0, false, {
+                fileName: "[project]/components/UserBalance.tsx",
+                lineNumber: 46,
+                columnNumber: 17
+            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "mb-2 text-xm text-gray-500",
+                        children: "Wallet:"
+                    }, void 0, false, {
+                        fileName: "[project]/components/UserBalance.tsx",
+                        lineNumber: 48,
+                        columnNumber: 13
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "mb-4 break-all text-sm font-mono",
+                        children: address
+                    }, void 0, false, {
+                        fileName: "[project]/components/UserBalance.tsx",
+                        lineNumber: 51,
+                        columnNumber: 13
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "text-4xl font-bold text-green-600",
+                        children: [
+                            Number(balance).toFixed(4),
+                            " ETH"
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/UserBalance.tsx",
+                        lineNumber: 53,
+                        columnNumber: 13
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "mt-2 text-sm text-gray-500",
+                        children: "Your Deposited ETH"
+                    }, void 0, false, {
+                        fileName: "[project]/components/UserBalance.tsx",
+                        lineNumber: 56,
+                        columnNumber: 13
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        onClick: ()=>loadBalance(address),
+                        className: "mt-4 rounded bg-green-600 px-4 py-2 text-white hover:bg-green-700",
+                        children: "Refresh"
+                    }, void 0, false, {
+                        fileName: "[project]/components/UserBalance.tsx",
+                        lineNumber: 59,
+                        columnNumber: 13
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/components/UserBalance.tsx",
+                lineNumber: 47,
+                columnNumber: 18
+            }, this),
+            " "
+        ]
+    }, void 0, true, {
+        fileName: "[project]/components/UserBalance.tsx",
+        lineNumber: 41,
+        columnNumber: 9
+    }, this);
+}
+}),
+"[project]/components/VaultBalance.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>VaultBalance
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers__$2e$formatEther$3e$__ = __turbopack_context__.i("[project]/node_modules/ethers/lib.esm/ethers.js [app-ssr] (ecmascript) <export * as ethers .formatEther>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$Contract$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/Contract.ts [app-ssr] (ecmascript)");
+"use client";
+;
+;
+;
+;
+function VaultBalance() {
+    const [balance, setBalance] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("0");
+    const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true);
+    const loadBalance = async ()=>{
+        try {
+            const contract = (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$Contract$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getVaultReadContract"])();
+            console.log("Contract target:", contract.target);
+            const provider = contract.runner;
+            console.log("Network:", await provider.getNetwork());
+            const code = await provider.getCode(contract.target);
+            console.log("code:", code);
+            const vaultBalance = await contract.ContractBalance();
+            console.log("Vault balance:", vaultBalance.toString());
+            setBalance(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers__$2e$formatEther$3e$__["ethers"].formatEther(vaultBalance));
+        } catch (err) {
+            console.error("Error loading vault balance.", err);
+        } finally{
+            setLoading(false);
+        }
+    };
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        loadBalance();
+        // Refresh every 10 seconds
+        const interval = setInterval(loadBalance, 10000);
+        return ()=>clearInterval(interval);
+    }, []);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "rounded-lg bg-white p-6 shadow-md",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                className: "mb-2 text-xl font-bold",
+                children: " Vault Balance "
+            }, void 0, false, {
+                fileName: "[project]/components/VaultBalance.tsx",
+                lineNumber: 37,
+                columnNumber: 10
+            }, this),
+            loading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                children: " Loading..."
+            }, void 0, false, {
+                fileName: "[project]/components/VaultBalance.tsx",
+                lineNumber: 39,
+                columnNumber: 13
+            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "text-4xl font-bold text-blue-600",
+                        children: [
+                            Number(balance).toFixed(4),
+                            " ETH"
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/VaultBalance.tsx",
+                        lineNumber: 42,
+                        columnNumber: 10
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "mt-2 text-sm text-green-500",
+                        children: "Total ETH locked in the Vault."
+                    }, void 0, false, {
+                        fileName: "[project]/components/VaultBalance.tsx",
+                        lineNumber: 45,
+                        columnNumber: 10
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        onClick: loadBalance,
+                        className: "mt-4 rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700",
+                        children: "refresh"
+                    }, void 0, false, {
+                        fileName: "[project]/components/VaultBalance.tsx",
+                        lineNumber: 48,
+                        columnNumber: 10
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/components/VaultBalance.tsx",
+                lineNumber: 41,
+                columnNumber: 10
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/components/VaultBalance.tsx",
+        lineNumber: 36,
+        columnNumber: 9
+    }, this);
+}
+}),
+"[project]/components/Walletconnect.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>WalletConnect
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$web3$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/web3.ts [app-ssr] (ecmascript)");
+"use client";
+;
+;
+;
+function WalletConnect() {
+    const [address, setAddress] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    // Connect Wallet
+    const handleConnect = async ()=>{
+        try {
+            setLoading(true);
+            const walletAddress = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$web3$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["connectWallet"])();
+            setAddress(walletAddress.address);
+        } catch (error) {
+            console.error(error);
+            alert("Failed to connect wallet.");
+        } finally{
+            setLoading(false);
+        }
+    };
+    // Disconnect Wallet
+    const handleDisconnect = ()=>{
+        setAddress("");
+    };
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if ("TURBOPACK compile-time truthy", 1) return;
+        //TURBOPACK unreachable
+        ;
+        // Listen for account changes
+        const handleAccountsChanged = undefined;
+    }, []);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "flex items-center gap-3",
+        children: [
+            address,
+            "? ",
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        className: "rounded bg-gray-100 px-3 py-2 text-sm",
+                        children: [
+                            address.slice(0, 6),
+                            "...",
+                            address.slice(-4)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/Walletconnect.tsx",
+                        lineNumber: 56,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        onClick: handleDisconnect,
+                        className: "rounded bg-red-600 px-4 py-2 text-white hover:bg-red-700",
+                        children: "Disconnect"
+                    }, void 0, false, {
+                        fileName: "[project]/components/Walletconnect.tsx",
+                        lineNumber: 60,
+                        columnNumber: 9
+                    }, this),
+                    " "
+                ]
+            }, void 0, true, {
+                fileName: "[project]/components/Walletconnect.tsx",
+                lineNumber: 55,
+                columnNumber: 22
+            }, this),
+            ": (",
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                onClick: handleConnect,
+                disabled: loading,
+                className: "rounded bg-blue-600 px-4 py-2 text-white hover:blue-700 disabled:bg-green-400",
+                children: loading ? "Connecting..." : "Connect Wallet"
+            }, void 0, false, {
+                fileName: "[project]/components/Walletconnect.tsx",
+                lineNumber: 65,
+                columnNumber: 13
+            }, this),
+            ")"
+        ]
+    }, void 0, true, {
+        fileName: "[project]/components/Walletconnect.tsx",
+        lineNumber: 54,
+        columnNumber: 5
+    }, this);
+}
+}),
+"[project]/contract/out/Vault.sol/Vault.json.[json].cjs [app-ssr] (ecmascript)", ((__turbopack_context__, module, exports) => {
+
+module.exports = JSON.parse("{\"abi\":[{\"type\":\"function\",\"name\":\"balances\",\"inputs\":[{\"name\":\"\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"contractBalance\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"deposit\",\"inputs\":[],\"outputs\":[],\"stateMutability\":\"payable\"},{\"type\":\"function\",\"name\":\"getBalance\",\"inputs\":[{\"name\":\"user\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"withdraw\",\"inputs\":[],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"event\",\"name\":\"Deposited\",\"inputs\":[{\"name\":\"user\",\"type\":\"address\",\"indexed\":true,\"internalType\":\"address\"},{\"name\":\"amount\",\"type\":\"uint256\",\"indexed\":false,\"internalType\":\"uint256\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"Withdrawn\",\"inputs\":[{\"name\":\"user\",\"type\":\"address\",\"indexed\":true,\"internalType\":\"address\"},{\"name\":\"amount\",\"type\":\"uint256\",\"indexed\":false,\"internalType\":\"uint256\"}],\"anonymous\":false}],\"bytecode\":{\"object\":\"0x6080604052348015600e575f5ffd5b5061069b8061001c5f395ff3fe608060405260043610610049575f3560e01c806327e235e31461004d5780633ccfd60b146100895780638b7afe2e1461009f578063d0e30db0146100c9578063f8b2cb4f146100d3575b5f5ffd5b348015610058575f5ffd5b50610073600480360381019061006e9190610420565b61010f565b6040516100809190610463565b60405180910390f35b348015610094575f5ffd5b5061009d610123565b005b3480156100aa575f5ffd5b506100b36102e0565b6040516100c09190610463565b60405180910390f35b6100d16102e7565b005b3480156100de575f5ffd5b506100f960048036038101906100f49190610420565b61037d565b6040516101069190610463565b60405180910390f35b5f602052805f5260405f205f915090505481565b5f5f5f3373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020015f205490505f81116101a5576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161019c906104d6565b60405180910390fd5b5f5f5f3373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020015f20819055503373ffffffffffffffffffffffffffffffffffffffff167f7084f5476618d8e60b11ef0d7d3f06914655adb8793e28ff7f018d4c76d505d58260405161022c9190610463565b60405180910390a25f3373ffffffffffffffffffffffffffffffffffffffff168260405161025990610521565b5f6040518083038185875af1925050503d805f8114610293576040519150601f19603f3d011682016040523d82523d5f602084013e610298565b606091505b50509050806102dc576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016102d39061057f565b60405180910390fd5b5050565b5f47905090565b5f3411610329576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610320906105e7565b60405180910390fd5b345f5f3373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020015f205f8282546103749190610632565b92505081905550565b5f5f5f8373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020015f20549050919050565b5f5ffd5b5f73ffffffffffffffffffffffffffffffffffffffff82169050919050565b5f6103ef826103c6565b9050919050565b6103ff816103e5565b8114610409575f5ffd5b50565b5f8135905061041a816103f6565b92915050565b5f60208284031215610435576104346103c2565b5b5f6104428482850161040c565b91505092915050565b5f819050919050565b61045d8161044b565b82525050565b5f6020820190506104765f830184610454565b92915050565b5f82825260208201905092915050565b7f4e6f7468696e6720746f207769746864726177000000000000000000000000005f82015250565b5f6104c060138361047c565b91506104cb8261048c565b602082019050919050565b5f6020820190508181035f8301526104ed816104b4565b9050919050565b5f81905092915050565b50565b5f61050c5f836104f4565b9150610517826104fe565b5f82019050919050565b5f61052b82610501565b9150819050919050565b7f5472616e73666572206661696c656400000000000000000000000000000000005f82015250565b5f610569600f8361047c565b915061057482610535565b602082019050919050565b5f6020820190508181035f8301526105968161055d565b9050919050565b7f53656e64204554480000000000000000000000000000000000000000000000005f82015250565b5f6105d160088361047c565b91506105dc8261059d565b602082019050919050565b5f6020820190508181035f8301526105fe816105c5565b9050919050565b7f4e487b71000000000000000000000000000000000000000000000000000000005f52601160045260245ffd5b5f61063c8261044b565b91506106478361044b565b925082820190508082111561065f5761065e610605565b5b9291505056fea26469706673582212206cba149ce22f67cc179f92761faf108f569e3882002bdae2f6151f3aa60b19fd64736f6c63430008250033\",\"sourceMap\":\"57:895:0:-:0;;;;;;;;;;;;;;;;;;;\",\"linkReferences\":{}},\"deployedBytecode\":{\"object\":\"0x608060405260043610610049575f3560e01c806327e235e31461004d5780633ccfd60b146100895780638b7afe2e1461009f578063d0e30db0146100c9578063f8b2cb4f146100d3575b5f5ffd5b348015610058575f5ffd5b50610073600480360381019061006e9190610420565b61010f565b6040516100809190610463565b60405180910390f35b348015610094575f5ffd5b5061009d610123565b005b3480156100aa575f5ffd5b506100b36102e0565b6040516100c09190610463565b60405180910390f35b6100d16102e7565b005b3480156100de575f5ffd5b506100f960048036038101906100f49190610420565b61037d565b6040516101069190610463565b60405180910390f35b5f602052805f5260405f205f915090505481565b5f5f5f3373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020015f205490505f81116101a5576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161019c906104d6565b60405180910390fd5b5f5f5f3373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020015f20819055503373ffffffffffffffffffffffffffffffffffffffff167f7084f5476618d8e60b11ef0d7d3f06914655adb8793e28ff7f018d4c76d505d58260405161022c9190610463565b60405180910390a25f3373ffffffffffffffffffffffffffffffffffffffff168260405161025990610521565b5f6040518083038185875af1925050503d805f8114610293576040519150601f19603f3d011682016040523d82523d5f602084013e610298565b606091505b50509050806102dc576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016102d39061057f565b60405180910390fd5b5050565b5f47905090565b5f3411610329576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610320906105e7565b60405180910390fd5b345f5f3373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020015f205f8282546103749190610632565b92505081905550565b5f5f5f8373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020015f20549050919050565b5f5ffd5b5f73ffffffffffffffffffffffffffffffffffffffff82169050919050565b5f6103ef826103c6565b9050919050565b6103ff816103e5565b8114610409575f5ffd5b50565b5f8135905061041a816103f6565b92915050565b5f60208284031215610435576104346103c2565b5b5f6104428482850161040c565b91505092915050565b5f819050919050565b61045d8161044b565b82525050565b5f6020820190506104765f830184610454565b92915050565b5f82825260208201905092915050565b7f4e6f7468696e6720746f207769746864726177000000000000000000000000005f82015250565b5f6104c060138361047c565b91506104cb8261048c565b602082019050919050565b5f6020820190508181035f8301526104ed816104b4565b9050919050565b5f81905092915050565b50565b5f61050c5f836104f4565b9150610517826104fe565b5f82019050919050565b5f61052b82610501565b9150819050919050565b7f5472616e73666572206661696c656400000000000000000000000000000000005f82015250565b5f610569600f8361047c565b915061057482610535565b602082019050919050565b5f6020820190508181035f8301526105968161055d565b9050919050565b7f53656e64204554480000000000000000000000000000000000000000000000005f82015250565b5f6105d160088361047c565b91506105dc8261059d565b602082019050919050565b5f6020820190508181035f8301526105fe816105c5565b9050919050565b7f4e487b71000000000000000000000000000000000000000000000000000000005f52601160045260245ffd5b5f61063c8261044b565b91506106478361044b565b925082820190508082111561065f5761065e610605565b5b9291505056fea26469706673582212206cba149ce22f67cc179f92761faf108f569e3882002bdae2f6151f3aa60b19fd64736f6c63430008250033\",\"sourceMap\":\"57:895:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;78:42;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;378:338;;;;;;;;;;;;;:::i;:::-;;837:112;;;;;;;;;;;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;244:129;;;:::i;:::-;;721:111;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;78:42;;;;;;;;;;;;;;;;;:::o;378:338::-;416:14;433:8;:20;442:10;433:20;;;;;;;;;;;;;;;;416:37;;480:1;471:6;:10;463:42;;;;;;;;;;;;:::i;:::-;;;;;;;;;538:1;515:8;:20;524:10;515:20;;;;;;;;;;;;;;;:24;;;;564:10;554:29;;;576:6;554:29;;;;;;:::i;:::-;;;;;;;;594:12;620:10;612:24;;644:6;612:43;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;593:62;;;673:7;665:35;;;;;;;;;;;;:::i;:::-;;;;;;;;;406:310;;378:338::o;837:112::-;887:7;917:21;910:28;;837:112;:::o;244:129::-;309:1;297:9;:13;289:34;;;;;;;;;;;;:::i;:::-;;;;;;;;;357:9;333:8;:20;342:10;333:20;;;;;;;;;;;;;;;;:33;;;;;;;:::i;:::-;;;;;;;;244:129::o;721:111::-;778:7;807:8;:14;816:4;807:14;;;;;;;;;;;;;;;;800:21;;721:111;;;:::o;88:117:1:-;197:1;194;187:12;334:126;371:7;411:42;404:5;400:54;389:65;;334:126;;;:::o;466:96::-;503:7;532:24;550:5;532:24;:::i;:::-;521:35;;466:96;;;:::o;568:122::-;641:24;659:5;641:24;:::i;:::-;634:5;631:35;621:63;;680:1;677;670:12;621:63;568:122;:::o;696:139::-;742:5;780:6;767:20;758:29;;796:33;823:5;796:33;:::i;:::-;696:139;;;;:::o;841:329::-;900:6;949:2;937:9;928:7;924:23;920:32;917:119;;;955:79;;:::i;:::-;917:119;1075:1;1100:53;1145:7;1136:6;1125:9;1121:22;1100:53;:::i;:::-;1090:63;;1046:117;841:329;;;;:::o;1176:77::-;1213:7;1242:5;1231:16;;1176:77;;;:::o;1259:118::-;1346:24;1364:5;1346:24;:::i;:::-;1341:3;1334:37;1259:118;;:::o;1383:222::-;1476:4;1514:2;1503:9;1499:18;1491:26;;1527:71;1595:1;1584:9;1580:17;1571:6;1527:71;:::i;:::-;1383:222;;;;:::o;1611:169::-;1695:11;1729:6;1724:3;1717:19;1769:4;1764:3;1760:14;1745:29;;1611:169;;;;:::o;1786:::-;1926:21;1922:1;1914:6;1910:14;1903:45;1786:169;:::o;1961:366::-;2103:3;2124:67;2188:2;2183:3;2124:67;:::i;:::-;2117:74;;2200:93;2289:3;2200:93;:::i;:::-;2318:2;2313:3;2309:12;2302:19;;1961:366;;;:::o;2333:419::-;2499:4;2537:2;2526:9;2522:18;2514:26;;2586:9;2580:4;2576:20;2572:1;2561:9;2557:17;2550:47;2614:131;2740:4;2614:131;:::i;:::-;2606:139;;2333:419;;;:::o;2758:147::-;2859:11;2896:3;2881:18;;2758:147;;;;:::o;2911:114::-;;:::o;3031:398::-;3190:3;3211:83;3292:1;3287:3;3211:83;:::i;:::-;3204:90;;3303:93;3392:3;3303:93;:::i;:::-;3421:1;3416:3;3412:11;3405:18;;3031:398;;;:::o;3435:379::-;3619:3;3641:147;3784:3;3641:147;:::i;:::-;3634:154;;3805:3;3798:10;;3435:379;;;:::o;3820:165::-;3960:17;3956:1;3948:6;3944:14;3937:41;3820:165;:::o;3991:366::-;4133:3;4154:67;4218:2;4213:3;4154:67;:::i;:::-;4147:74;;4230:93;4319:3;4230:93;:::i;:::-;4348:2;4343:3;4339:12;4332:19;;3991:366;;;:::o;4363:419::-;4529:4;4567:2;4556:9;4552:18;4544:26;;4616:9;4610:4;4606:20;4602:1;4591:9;4587:17;4580:47;4644:131;4770:4;4644:131;:::i;:::-;4636:139;;4363:419;;;:::o;4788:158::-;4928:10;4924:1;4916:6;4912:14;4905:34;4788:158;:::o;4952:365::-;5094:3;5115:66;5179:1;5174:3;5115:66;:::i;:::-;5108:73;;5190:93;5279:3;5190:93;:::i;:::-;5308:2;5303:3;5299:12;5292:19;;4952:365;;;:::o;5323:419::-;5489:4;5527:2;5516:9;5512:18;5504:26;;5576:9;5570:4;5566:20;5562:1;5551:9;5547:17;5540:47;5604:131;5730:4;5604:131;:::i;:::-;5596:139;;5323:419;;;:::o;5748:180::-;5796:77;5793:1;5786:88;5893:4;5890:1;5883:15;5917:4;5914:1;5907:15;5934:191;5974:3;5993:20;6011:1;5993:20;:::i;:::-;5988:25;;6027:20;6045:1;6027:20;:::i;:::-;6022:25;;6070:1;6067;6063:9;6056:16;;6091:3;6088:1;6085:10;6082:36;;;6098:18;;:::i;:::-;6082:36;5934:191;;;;:::o\",\"linkReferences\":{}},\"methodIdentifiers\":{\"balances(address)\":\"27e235e3\",\"contractBalance()\":\"8b7afe2e\",\"deposit()\":\"d0e30db0\",\"getBalance(address)\":\"f8b2cb4f\",\"withdraw()\":\"3ccfd60b\"},\"rawMetadata\":\"{\\\"compiler\\\":{\\\"version\\\":\\\"0.8.37+commit.f401782d\\\"},\\\"language\\\":\\\"Solidity\\\",\\\"output\\\":{\\\"abi\\\":[{\\\"anonymous\\\":false,\\\"inputs\\\":[{\\\"indexed\\\":true,\\\"internalType\\\":\\\"address\\\",\\\"name\\\":\\\"user\\\",\\\"type\\\":\\\"address\\\"},{\\\"indexed\\\":false,\\\"internalType\\\":\\\"uint256\\\",\\\"name\\\":\\\"amount\\\",\\\"type\\\":\\\"uint256\\\"}],\\\"name\\\":\\\"Deposited\\\",\\\"type\\\":\\\"event\\\"},{\\\"anonymous\\\":false,\\\"inputs\\\":[{\\\"indexed\\\":true,\\\"internalType\\\":\\\"address\\\",\\\"name\\\":\\\"user\\\",\\\"type\\\":\\\"address\\\"},{\\\"indexed\\\":false,\\\"internalType\\\":\\\"uint256\\\",\\\"name\\\":\\\"amount\\\",\\\"type\\\":\\\"uint256\\\"}],\\\"name\\\":\\\"Withdrawn\\\",\\\"type\\\":\\\"event\\\"},{\\\"inputs\\\":[{\\\"internalType\\\":\\\"address\\\",\\\"name\\\":\\\"\\\",\\\"type\\\":\\\"address\\\"}],\\\"name\\\":\\\"balances\\\",\\\"outputs\\\":[{\\\"internalType\\\":\\\"uint256\\\",\\\"name\\\":\\\"\\\",\\\"type\\\":\\\"uint256\\\"}],\\\"stateMutability\\\":\\\"view\\\",\\\"type\\\":\\\"function\\\"},{\\\"inputs\\\":[],\\\"name\\\":\\\"contractBalance\\\",\\\"outputs\\\":[{\\\"internalType\\\":\\\"uint256\\\",\\\"name\\\":\\\"\\\",\\\"type\\\":\\\"uint256\\\"}],\\\"stateMutability\\\":\\\"view\\\",\\\"type\\\":\\\"function\\\"},{\\\"inputs\\\":[],\\\"name\\\":\\\"deposit\\\",\\\"outputs\\\":[],\\\"stateMutability\\\":\\\"payable\\\",\\\"type\\\":\\\"function\\\"},{\\\"inputs\\\":[{\\\"internalType\\\":\\\"address\\\",\\\"name\\\":\\\"user\\\",\\\"type\\\":\\\"address\\\"}],\\\"name\\\":\\\"getBalance\\\",\\\"outputs\\\":[{\\\"internalType\\\":\\\"uint256\\\",\\\"name\\\":\\\"\\\",\\\"type\\\":\\\"uint256\\\"}],\\\"stateMutability\\\":\\\"view\\\",\\\"type\\\":\\\"function\\\"},{\\\"inputs\\\":[],\\\"name\\\":\\\"withdraw\\\",\\\"outputs\\\":[],\\\"stateMutability\\\":\\\"nonpayable\\\",\\\"type\\\":\\\"function\\\"}],\\\"devdoc\\\":{\\\"kind\\\":\\\"dev\\\",\\\"methods\\\":{},\\\"version\\\":1},\\\"userdoc\\\":{\\\"kind\\\":\\\"user\\\",\\\"methods\\\":{},\\\"version\\\":1}},\\\"settings\\\":{\\\"compilationTarget\\\":{\\\"src/Vault.sol\\\":\\\"Vault\\\"},\\\"evmVersion\\\":\\\"osaka\\\",\\\"libraries\\\":{},\\\"metadata\\\":{\\\"bytecodeHash\\\":\\\"ipfs\\\"},\\\"optimizer\\\":{\\\"enabled\\\":false,\\\"runs\\\":200},\\\"remappings\\\":[\\\":forge-std/=lib/forge-std/src/\\\"]},\\\"sources\\\":{\\\"src/Vault.sol\\\":{\\\"keccak256\\\":\\\"0x53520cc66c16c4dfe7852f32f0edf1f43a467a30f599facc490a36d6304eb8cc\\\",\\\"urls\\\":[\\\"bzz-raw://f95a60ccc72b4473f0827ab871b4c0849a91b4a593275b68a9acae24e3aa3ed3\\\",\\\"dweb:/ipfs/QmX3HDENWqpnA7T256DXsRw6TwkwtHAchbtyyUdmADBMpn\\\"]}},\\\"version\\\":1}\",\"metadata\":{\"compiler\":{\"version\":\"0.8.37+commit.f401782d\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\",\"indexed\":true},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\",\"indexed\":false}],\"type\":\"event\",\"name\":\"Deposited\",\"anonymous\":false},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\",\"indexed\":true},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\",\"indexed\":false}],\"type\":\"event\",\"name\":\"Withdrawn\",\"anonymous\":false},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\",\"name\":\"balances\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}]},{\"inputs\":[],\"stateMutability\":\"view\",\"type\":\"function\",\"name\":\"contractBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}]},{\"inputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\",\"name\":\"deposit\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\",\"name\":\"getBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}]},{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"name\":\"withdraw\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"remappings\":[\"forge-std/=lib/forge-std/src/\"],\"optimizer\":{\"enabled\":false,\"runs\":200},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"compilationTarget\":{\"src/Vault.sol\":\"Vault\"},\"evmVersion\":\"osaka\",\"libraries\":{}},\"sources\":{\"src/Vault.sol\":{\"keccak256\":\"0x53520cc66c16c4dfe7852f32f0edf1f43a467a30f599facc490a36d6304eb8cc\",\"urls\":[\"bzz-raw://f95a60ccc72b4473f0827ab871b4c0849a91b4a593275b68a9acae24e3aa3ed3\",\"dweb:/ipfs/QmX3HDENWqpnA7T256DXsRw6TwkwtHAchbtyyUdmADBMpn\"],\"license\":null}},\"version\":1},\"id\":0}");
+}),
+"[project]/lib/Contract.ts [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "getVaultReadContract",
+    ()=>getVaultReadContract,
+    "getVaultWriteContract",
+    ()=>getVaultWriteContract
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers__$2e$JsonRpcProvider$3e$__ = __turbopack_context__.i("[project]/node_modules/ethers/lib.esm/ethers.js [app-ssr] (ecmascript) <export * as ethers .JsonRpcProvider>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers__$2e$Contract$3e$__ = __turbopack_context__.i("[project]/node_modules/ethers/lib.esm/ethers.js [app-ssr] (ecmascript) <export * as ethers .Contract>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$web3$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/web3.ts [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$contract$2f$out$2f$Vault$2e$sol$2f$Vault$2e$json$2e5b$json$5d2e$cjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/contract/out/Vault.sol/Vault.json.[json].cjs [app-ssr] (ecmascript)");
+" use client";
+;
+;
+;
+const contractAddress = ("TURBOPACK compile-time value", "0xbbC26Ef5052B790fC03C5F8dD46d16ee9BC0B1Cd");
+const SEPOLIA_CHAIN_ID = 11155111;
+const provider = new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers__$2e$JsonRpcProvider$3e$__["ethers"].JsonRpcProvider(process.env.NEXT_PUBLIC_SEPOLIA_RPC_URL);
+function getVaultReadContract() {
+    return new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers__$2e$Contract$3e$__["ethers"].Contract(("TURBOPACK compile-time value", "0xbbC26Ef5052B790fC03C5F8dD46d16ee9BC0B1Cd"), __TURBOPACK__imported__module__$5b$project$5d2f$contract$2f$out$2f$Vault$2e$sol$2f$Vault$2e$json$2e5b$json$5d2e$cjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].abi, provider);
+}
+async function getVaultWriteContract() {
+    const signer = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$web3$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getSigner"])();
+    const network = await signer.provider.getNetwork();
+    if (Number(network.chainId) !== SEPOLIA_CHAIN_ID) {
+        throw new Error("Please switch Metamask to Sepolia.");
+    }
+    return new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers__$2e$Contract$3e$__["ethers"].Contract(contractAddress, __TURBOPACK__imported__module__$5b$project$5d2f$contract$2f$out$2f$Vault$2e$sol$2f$Vault$2e$json$2e5b$json$5d2e$cjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].abi, signer);
+}
+}),
+"[project]/lib/web3.ts [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "connectWallet",
+    ()=>connectWallet,
+    "getProvider",
+    ()=>getProvider,
+    "getSigner",
+    ()=>getSigner
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers__$2e$BrowserProvider$3e$__ = __turbopack_context__.i("[project]/node_modules/ethers/lib.esm/ethers.js [app-ssr] (ecmascript) <export * as ethers .BrowserProvider>");
+"use client";
+;
+const SEPOLIA_CHAIN_ID = "0xaa36a";
+async function getProvider() {
+    if ("TURBOPACK compile-time truthy", 1) {
+        throw new Error("Window is not available.");
+    }
+    if (!window.ethereum) {
+        throw new Error("Metamask is not installed.");
+    }
+    return new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers__$2e$BrowserProvider$3e$__["ethers"].BrowserProvider(window.ethereum);
+}
+async function getSigner() {
+    const provider = await getProvider();
+    const accounts = await provider.send("eth_accounts", []);
+    if (accounts.length === 0) {
+        throw new Error("wallet not connected");
+    }
+    return await provider.getSigner();
+}
+async function connectWallet() {
+    const provider = await getProvider();
+    if ("TURBOPACK compile-time truthy", 1) {
+        throw new Error("Window is not available.");
+    }
+    if (!window.ethereum) {
+        throw new Error("Metamask is notinstalled.");
+    }
+    await window.ethereum.request({
+        method: "wallet_switchEthereumChain",
+        params: [
+            {
+                chainId: SEPOLIA_CHAIN_ID
+            }
+        ]
+    });
+    const signer = await provider.getSigner();
+    return {
+        provider,
+        signer,
+        address: await signer.getAddress()
+    };
+}
+}),
+];
+
+//# sourceMappingURL=%5Broot-of-the-server%5D__05jdp8p7cgkml._.js.map
